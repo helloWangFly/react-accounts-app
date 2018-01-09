@@ -8,7 +8,7 @@ class Records extends Component {
       records: [
         {"id": 1, "date": "2018-01-09", "title": "收入", "amount": 20},
         {"id": 2, "date": "2018-01-03", "title": "录视频收入", "amount": 199},
-        {"id": 2, "date": "2018-01-03", "title": "录视频收入", "amount": 199},
+        {"id": 3, "date": "2018-01-03", "title": "录视频收入", "amount": 199},
       ]
     }
   }
@@ -26,7 +26,7 @@ class Records extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.state.records.map((record) => <Record record={record} />)}
+            {this.state.records.map((record) => <Record key={record.id} record={record} />)}
           </tbody>
         </table>
       </div>
